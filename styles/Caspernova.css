@@ -1,7 +1,21 @@
 h1{
-    font-size: 10px;
+    font-size: 100px;
 }
+p{
+    margin-top: 20%;
+    margin-left: 500px;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgb(139, 8, 109), 0 0 1em rgb(47, 0, 255), 0 0 0.2em rgb(8, 0, 255);
 
+}
+body {
+    background-image: url(/graphics/Casper_and_Nova_Titlecard.webp);
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
 button{
     background-color: peru;
     color: darkgoldenrod;
@@ -10,22 +24,155 @@ button{
     cursor: pointer;
 }
 
+.firstpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 200px;
+    height: 50px;
+    border-radius: 75px;
+    font-family:monospace;
+    background-color: rgba(103, 76, 193, 0.089);
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+  }
+  
+  div:hover {
+    box-shadow: 0 5px 35px 0px rgba(255, 255, 255, 0.859);
+  }
+  
+  div:hover::before, div:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  div:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+
 .start{
-    background-color: peru;
-    color: rgb(255, 232, 173);
-    height: 36px;
-    border-radius: 15px;
+    font-family: monospace;
+    margin: 20px auto;
+    margin-top: 10%;
+    margin-left: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    background-color: rgba(62, 75, 83, 0.051);
+    color: rgb(255, 255, 255);
+    text-shadow:#FFFFFF 1px 0 5px;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    border-color: #FFFFFF;
     cursor: pointer;
     transition: background-color .5s;
 }
 .start:hover{
-    background-color:rgb(131, 26, 26);
+    background-color:rgb(255, 255, 255);
+    border-color: #FFFFFF;
+    border-width: 0cap;
+    text-shadow: #d737ff 1px 0 10px;
 }
 .start:active{
     background-color:azure;
 }
 
 .casper{
+    margin-top:15%;
+    margin-left: 600px;
     background-color: peru;
     color: rgb(255, 232, 173);
     height: 36px;
@@ -53,3 +200,12 @@ button{
 .nova:active{
     background-color: azure;
 }
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+ }
+ 
+ * {
+    font-family: myFwow;
+ }

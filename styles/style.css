@@ -11,9 +11,7 @@ h1{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-h1:hover{
 
-}
 p{
     margin-top: 100px;    
     color: indigo;
@@ -69,7 +67,7 @@ a {
   }
   
  /* Presentational Styles */
- 
+
   body {
     display: grid;
     font-family: 'Poppins', sans-serif;
