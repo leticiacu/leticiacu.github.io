@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Legends Randomizer</title>
+  <link rel="icon" type="image/x-icon" href="/Assignment 2/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="Legendp.css">
+  <style>
+    body{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+    }
+    p #legendImages{
+      max-width: 10px;
+      /* Adjust the width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+      align-content: center;
+    }
+    .legend-image {
+            width: 250px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin: 10px; /* Add some spacing between images */
+        }
+        #background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+  </style>
+</head>
+
+
+<body>
+
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#assault">Assault</a>
+        <a href="#skirmisher">Skirmisher</a>
+      </div>
+
+
+    <div id="background"></div>
+  <h1>Apex Legends Randomizer</h1>
+  <p>Click the nessie below to randomly select a legend:</p>
+  <img id="nessiebutton" src="/Apex images/apex-legends-holospray-nessie-renato-silva-transparent.png" alt="Pick a Legend" onclick="randomizeLegend()" style="cursor: pointer;">
+<style> 
+#nessiebutton {
+  max-width: 100px;
+  height: auto;
+}
+</style>
+  <p id="selectedLegend"></p>
+  <div id="legendImages"></div>
+
+
+  <script>
+    // Array of legends with their corresponding image paths
+    var legendImages = {
+      "Bloodhound": "/Apex images/bloodhound.png",
+      "Mad Maggie": "/Apex images/maggie.png",
+      "Lifeline": "/Apex images/Lifeline.png",
+      "Caustic": "/Apex images/caustic.png",
+      "Mirage": "/Apex images/mirage.png",
+      "Loba": "/Apex images/loba.png",
+      "New Castle": "/Apex images/newcastle.png",
+      "Crypto": "/Apex images/crypto.png",
+      "Gibraltar": "/Apex images/gibraltar.png",
+      "Fuse": "/Apex images/fuse.png",
+      "Wraith": "/Apex images/wraith.png",
+      "Seer": "/Apex images/seer.png",
+      "Conduit": "/Apex images/conduit.png",
+      "Ballistic": "/Apex images/ballistic.png",
+      "Wattson": "/Apex images/wattson.png",
+      "Vantage": "/Apex images/vantage.png",
+      "Revenant": "/Apex images/revenant.png",
+      "Valkerie": "/Apex images/valkyrie.png",
+      "Rampart": "/Apex images/rampart.png",
+      "Bangalore": "/Apex images/bangalore.png",
+      "Horizon": "/Apex images/horizon.png",
+      "Ash": "/Apex images/ash.png",
+      "Octane": "/Apex images/octane.png",
+      "Pathfinder": "/Apex images/pathfinder.png",
+      "Catalyst": "/Apex images/catalyst.png"
+    };
+    var backgroundImages = [
+      "url('apex images/wattson_desk.png')",
+    ];
+    // Function to randomly select a legend and display it
+    function randomizeLegend() {
+        // Clear the content of the legendImages div
+  document.getElementById("legendImages").innerHTML = "";
+
+      var legends = Object.keys(legendImages);
+
+      var randomIndex = Math.floor(Math.random() * legends.length);
+
+      var selectedLegend = legends[randomIndex];
+
+      var imagePath = legendImages[selectedLegend];
+
+      document.getElementById("selectedLegend").innerText = "Selected Legend: " + selectedLegend;
+
+      displayLegendImage(imagePath);
+    
+// Change background image
+var randomBackgroundIndex = Math.floor(Math.random() * backgroundImages.length);
+      document.getElementById("background").style.backgroundImage = backgroundImages[randomBackgroundIndex];
+    }
+      displayLegendImage(imagePath);
+    
+
+    function displayLegendImage(imagePath) {
+      // Create a new image element
+      var image = document.createElement("img");
+      // Set the image source to the provided imagePath
+      image.src = imagePath;
+      // Set additional attributes as needed
+      image.alt = "Legend Image";
+      image.className = "legend-image";
+      // Append the image to the legendImages div
+      document.getElementById("legendImages").appendChild(image);
+    }
+  </script>
+</body>
+</html>
